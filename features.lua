@@ -93,7 +93,6 @@ autocmd("FileType", {
 })
 
 vim.opt.smartindent = true
-vim.opt.autoindent = true
 vim.opt.expandtab = true
 
 vim.opt.wrap = true
@@ -113,7 +112,6 @@ vim.opt.writebackup = false
 vim.opt.undofile = true
 
 vim.opt.hlsearch = true
-vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
