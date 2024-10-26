@@ -115,29 +115,26 @@ vim.opt.hlsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 3
-vim.opt.pumheight = 20
+vim.opt.scrolloff = 4
+vim.opt.sidescrolloff = 8
+vim.opt.pumheight = 10
 
-vim.opt.signcolumn = "auto"
 vim.opt.isfname:append("@-@")
 
 -- 设定在无操作时，交换文件刷写到磁盘的等待毫秒数（默认为 4000）
-vim.opt.updatetime = 50
+vim.opt.updatetime = 200
 
 -- 设定等待按键时长的毫秒数 leader key is ' ', so when you insert space it lags
-vim.opt.timeout = true
-vim.opt.timeoutlen = 200
+vim.opt.timeoutlen = vim.g.vscode and 1000 or 300
 vim.opt.mouse = "a"
 -- 去掉NonText和EndOfBuffer的~标志nvim only
-vim.opt.fillchars = { eob = ' ', fold = ' ', vert = '|' }
+vim.opt.fillchars = { eob = ' ', fold = ' ', foldopen = '', foldclose = '', foldsep = ' ', diff = '/', vert = '|' }
 
 vim.opt.colorcolumn = "80"
 
-vim.opt.wildmenu = true
-vim.opt.wildmode = { 'longest:list', 'full' }
+vim.opt.wildmode = 'longest:full,full'
 
-vim.opt.suffixesadd = ".java"
+-- vim.opt.suffixesadd = ".java"
 
 vim.opt.clipboard = "unnamedplus"
 
@@ -147,16 +144,12 @@ vim.opt.smartcase = true
 vim.opt.ignorecase = true
 
 -- 当文件被外部程序修改时，自动加载
-vim.o.autoread = true
-vim.bo.autoread = true
-
-vim.opt.foldcolumn = "0"
-vim.opt.foldenable = true
+--vim.bo.autoread = true
 
 -- 默认不要折叠
 -- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
+--vim.o.foldlevelstart = 99
 
 vim.opt_global.completeopt = "menu,menuone,noselect"
 vim.opt_global.grepprg = "rg --vimgrep --no-heading --smart-case"
