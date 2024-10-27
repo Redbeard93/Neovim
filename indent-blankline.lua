@@ -1,5 +1,4 @@
 -- lazyvim原始配置加入个人配置之后的备份版
-
 -- 定义高亮颜色
 local highlight = {
   "RainbowRed",
@@ -21,6 +20,7 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
   vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#94E2D5", bg = "NONE" })
   vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#89B4FA", bg = "NONE" })
   vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#C6A0F6", bg = "NONE" })
+  vim.api.nvim_set_hl(0, "Whitespace", { ctermfg = "DarkGrey", fg = "#616161" })
 end)
 
 return {
@@ -37,13 +37,10 @@ return {
           require("ibl").setup_buffer(0, { enabled = state })
         end,
       })
-
-      return {
-        highlight = highlight,
-        indent = {
-          char = "│",
-          tab_char = "│",
-        },
+    end,
+    main = "ibl",
+    config = function()
+      require("ibl").setup({
         scope = { show_start = false, show_end = false },
         exclude = {
           filetypes = {
@@ -60,12 +57,9 @@ return {
             "lazyterm",
           },
         },
-      }
-    end,
-    main = "ibl",
-    config = function()
-      require("ibl").setup({
         indent = {
+          char = "│",
+          tab_char = "│",
           highlight = highlight, -- 确保 highlight 配置被传递给 ibl
         },
       })
