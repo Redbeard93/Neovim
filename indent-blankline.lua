@@ -37,10 +37,8 @@ return {
           require("ibl").setup_buffer(0, { enabled = state })
         end,
       })
-    end,
-    main = "ibl",
-    config = function()
-      require("ibl").setup({
+
+      return {
         scope = { show_start = false, show_end = false },
         exclude = {
           filetypes = {
@@ -62,7 +60,8 @@ return {
           tab_char = "│",
           highlight = highlight, -- 确保 highlight 配置被传递给 ibl
         },
-      })
+      }
     end,
+    main = "ibl",
   },
 }
