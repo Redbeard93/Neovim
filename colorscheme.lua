@@ -1,5 +1,4 @@
 -- lazyvim原始配置加入个人配置之后的备份版
-
 return {
   {
     "folke/tokyonight.nvim",
@@ -41,31 +40,32 @@ return {
         hl.Normal = {
           bg = "NONE",
         }
+        hl.NormalFloat = {
+          bg = "NONE",
+        }
         hl.CursorColumn = {
           bg = "NONE",
           fg = "NONE",
           bold = true,
-          italic = true,
         }
         hl.CursorLine = {
           bg = "NONE",
           fg = "NONE",
           bold = true,
-          italic = true,
         }
         hl.CursorLineNr = {
           bold = true,
-          bg = "none",
+          bg = "NONE",
           fg = "#9D9D61",
         }
         hl.LineNrAbove = {
           italic = true,
-          bg = "none",
+          bg = "NONE",
           fg = "#9E619E",
         }
         hl.LineNrBelow = {
           italic = true,
-          bg = "none",
+          bg = "NONE",
           fg = "#619E9E",
         }
         hl.Whitespace = {
@@ -74,13 +74,6 @@ return {
         hl.NonText = {
           fg = "#616161",
         }
-        hl.String = {
-          bold = false,
-        }
-        hl.Comment = {
-          bold = false,
-        }
-
       end,
     },
   },
