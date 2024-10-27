@@ -74,6 +74,13 @@ return {
         hl.NonText = {
           fg = "#616161",
         }
+        hl.String = {
+          bold = false,
+        }
+        hl.Comment = {
+          bold = false,
+        }
+
       end,
     },
   },
