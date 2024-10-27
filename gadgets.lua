@@ -1,3 +1,4 @@
+--这是个人的原始版本不能直接使用，需要根据当前配置进行对照修改
 -- 自动切换输入法（fcitx5 框架）
 --vim.g.fcitx5ToggleInput = function()
 --    local input_status = tonumber(vim.fn.system("fcitx5-remote"))
