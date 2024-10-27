@@ -1,3 +1,5 @@
+-- lazyvim原始配置加入个人配置之后的备份版
+
 return {
   -- lazy.nvim
   {
