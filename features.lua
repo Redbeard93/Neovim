@@ -1,3 +1,4 @@
+--这是个人的原始版本不能直接使用，需要根据当前配置进行对照修改
 local config = require("config")
 -- vim.g.python_host_prog='/opt/homebrew/bin/python3'
 vim.g.python3_host_prog = config.env.py_bin
