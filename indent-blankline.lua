@@ -1,3 +1,5 @@
+-- lazyvim原始配置加入个人配置之后的备份版
+
 -- 定义高亮颜色
 local highlight = {
   "RainbowRed",
