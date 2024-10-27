@@ -1,3 +1,4 @@
+--这是个人的原始版本不能直接使用，需要根据当前配置进行对照修改
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
