@@ -74,6 +74,11 @@ return {
         hl.NonText = {
           fg = "#616161",
         }
+        hl.LspInlayHint = {
+          bg = "NONE",
+          fg = "#545c7e",
+        }
+
       end,
     },
   },
