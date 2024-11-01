@@ -80,11 +80,11 @@ return {
         }
         hl.StatusLine = {
           bg = "NONE",
-          fg = "NONE",
+          fg = "#828bb8",
         }
         hl.StatusLineNC = {
           bg = "NONE",
-          fg = "NONE",
+          fg = "#3b4261",
         }
       end,
     },
