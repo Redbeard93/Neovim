@@ -19,14 +19,14 @@ return {
           fg = c.bg_dark,
         }
         hl.TelescopePromptNormal = {
-          bg = prompt,
+          bg = "NONE",
         }
         hl.TelescopePromptBorder = {
-          bg = prompt,
-          fg = prompt,
+          bg = "NONE",
+          fg = c.bg_dark,
         }
         hl.TelescopePromptTitle = {
-          bg = prompt,
+          bg = "NONE",
           fg = prompt,
         }
         hl.TelescopePreviewTitle = {
