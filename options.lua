@@ -113,7 +113,6 @@ opt.spelloptions:append("noplainbuffer")
 opt.splitbelow = true -- Put new windows below current
 opt.splitkeep = "screen"
 opt.splitright = true -- Put new windows right of current
-opt.statuscolumn = [[%!v:lua.require'lazyvim.util'.ui.statuscolumn()]]
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
 opt.timeoutlen = vim.g.vscode and 1000 or 300 -- Lower than default (1000) to quickly trigger which-key
@@ -144,80 +143,3 @@ opt.winbar = "%=%m %f"
 opt.colorcolumn = "80"
 
 --opt.suffixesadd = ".java"
-
--- UI highlight
-
-vim.api.nvim_set_hl(0, "EndOfBuffer", { ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "Cursor", { bg = "#9E619E", fg = "#619E9E" })
-vim.api.nvim_set_hl(0, "ModeMsg", { bg = "NONE", fg = "#619E9E" })
-vim.api.nvim_set_hl(0, "Search", { bg = "#619E9E", fg = "#9E619E" })
-vim.api.nvim_set_hl(0, "IncSearch", { bg = "#9E619E", fg = "#619E9E" })
-vim.api.nvim_set_hl(0, "WildMenu", { bg = "#9E619E", fg = "#619E9E" })
-vim.api.nvim_set_hl(0, "Normal", { ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "Pmenu", { cterm = { bold = true }, bold = true, ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "StatusLine", { ctermbg = "NONE", bg = "NONE", fg = "#9E9E9E" })
-vim.api.nvim_set_hl(0, "StatusLineNC", { ctermbg = "NONE", bg = "#100D23", fg = "#9E619E" })
-vim.api.nvim_set_hl(0, "TabLineSel", { ctermbg = "NONE", bg = "NONE", fg = "#9E9E9E" })
-vim.api.nvim_set_hl(0, "TabLineFill", { ctermbg = "NONE", bg = "NONE", fg = "NONE" })
-vim.api.nvim_set_hl(0, "TabLine", { ctermbg = "NONE", bg = "NONE", fg = "#616161" })
-vim.api.nvim_set_hl(
-  0,
-  "LineNrBelow",
-  { cterm = { italic = true }, ctermbg = "NONE", ctermfg = "DarkMagenta", italic = true, bg = "none", fg = "#619E9E" }
-)
-vim.api.nvim_set_hl(
-  0,
-  "LineNrAbove",
-  { cterm = { italic = true }, ctermbg = "NONE", ctermfg = "DarkCyan", italic = true, bg = "none", fg = "#9E619E" }
-)
-vim.api.nvim_set_hl(
-  0,
-  "CursorLineNr",
-  { cterm = { bold = true }, ctermbg = "NONE", ctermfg = "LightYellow", bold = true, bg = "none", fg = "#9D9D61" }
-)
-vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg = "Black", bg = "#616161" })
-vim.api.nvim_set_hl(0, "SignColumn", { ctermbg = "NONE", ctermfg = "NONE", bg = "NONE", fg = "NONE" })
-vim.api.nvim_set_hl(
-  0,
-  "CursorLine",
-  { cterm = { bold = true }, ctermbg = "NONE", bold = true, bg = "NONE", fg = "NONE" }
-)
-vim.api.nvim_set_hl(
-  0,
-  "CursorColumn",
-  { cterm = { bold = true }, ctermbg = "NONE", bold = true, bg = "NONE", fg = "NONE" }
-)
-vim.api.nvim_set_hl(0, "VertSplit", { fg = "#9E9E61" })
-vim.api.nvim_set_hl(
-  0,
-  "DiffAdd",
-  { cterm = { bold = true }, ctermfg = "LightGreen", ctermbg = "NONE", bold = true, fg = "#619E61", bg = "NONE" }
-)
-vim.api.nvim_set_hl(
-  0,
-  "DiffChange",
-  { cterm = { bold = true }, ctermfg = "LightBlue", ctermbg = "NONE", bold = true, fg = "#61619E", bg = "NONE" }
-)
-vim.api.nvim_set_hl(
-  0,
-  "DiffDelete",
-  { cterm = { bold = true }, ctermfg = "LightGrey", ctermbg = "NONE", bold = true, fg = "#9E9E9E", bg = "NONE" }
-)
-vim.api.nvim_set_hl(
-  0,
-  "DiffChangeDelete",
-  { cterm = { bold = true }, ctermfg = "LightRed", ctermbg = "NONE", bold = true, fg = "#9E6161", bg = "NONE" }
-)
-vim.api.nvim_set_hl(0, "Whitespace", { ctermfg = "DarkGrey", fg = "#616161" })
-vim.api.nvim_set_hl(0, "NonText", { ctermfg = "DarkGrey", fg = "#616161" })
-vim.api.nvim_set_hl(0, "Title", { ctermfg = "DarkMagenta", fg = "#F38BA8" })
-
--- Indent-Blankline Catppuccin highlight
-vim.api.nvim_set_hl(0, "IndentBlanklineIndent1", { fg = "#F38BA8", bg = "NONE" })
-vim.api.nvim_set_hl(0, "IndentBlanklineIndent2", { fg = "#FAB387", bg = "NONE" })
-vim.api.nvim_set_hl(0, "IndentBlanklineIndent3", { fg = "#F9E2AF", bg = "NONE" })
-vim.api.nvim_set_hl(0, "IndentBlanklineIndent4", { fg = "#A6E3A1", bg = "NONE" })
-vim.api.nvim_set_hl(0, "IndentBlanklineIndent5", { fg = "#94E2D5", bg = "NONE" })
-vim.api.nvim_set_hl(0, "IndentBlanklineIndent6", { fg = "#89B4FA", bg = "NONE" })
-vim.api.nvim_set_hl(0, "IndentBlanklineIndent7", { fg = "#C6A0F6", bg = "NONE" })
