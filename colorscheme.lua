@@ -56,7 +56,7 @@ return {
         hl.CursorLineNr = {
           bold = true,
           bg = "NONE",
-          fg = "#9D9D61",
+          fg = "#cebc86",
         }
         hl.LineNrAbove = {
           italic = true,
